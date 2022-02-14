@@ -82,8 +82,8 @@ jobs:
           poetry-version: ${{ env.POETRY_VERSION }}
       - name: Install dependencies
         run: poetry install
-      - name: Run pytest
-        run: poetry run pytest
+      - name: Run tox
+        run: poetry run tox
   push:
     name: Push to PyPi
     runs-on: ubuntu-latest

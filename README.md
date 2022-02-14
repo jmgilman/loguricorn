@@ -35,8 +35,16 @@ All log records will now be routed through the default `loguru.logger`.
 Testing is done by starting `gunicorn` in a subprocess with the custom logger
 enabled and validating that the emitted logs match the expected format.
 
+Install dev dependencies:
+
 ```shell
-poetry run pytest .
+poetry install
+```
+
+Run test:
+
+```shell
+poetry run tox .
 ```
 
 ## Contributing
