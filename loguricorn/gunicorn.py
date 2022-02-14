@@ -1,5 +1,7 @@
 import logging
+
 from gunicorn import glogging  # type: ignore
+
 from loguricorn.intercept import InterceptHandler
 
 

@@ -5,7 +5,6 @@ import re
 import signal
 import subprocess
 
-
 DEFAULT_TIMEOUT_MESSAGE = os.strerror(errno.ETIME)
 LOG_PATTERN = r"^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]+ \| [A-Z]+ \s+\|"  # noqa: E501
 

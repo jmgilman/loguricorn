@@ -1,5 +1,14 @@
 # loguricorn
 
+<p align="center">
+    <a href="https://github.com/jmgilman/loguricorn/actions/workflows/ci.yml">
+        <img src="https://github.com/jmgilman/loguricorn/actions/workflows/ci.yml/badge.svg"/>
+    </a>
+    <a href="https://pypi.org/project/loguricorn">
+        <img src="https://img.shields.io/pypi/v/loguricorn"/>
+    </a>
+</p>
+
 > A small package for rerouting [gunicorn][1] logs to [loguru][2]
 
 This package provides a compatible interface for automatically routing
@@ -27,7 +36,7 @@ Testing is done by starting `gunicorn` in a subprocess with the custom logger
 enabled and validating that the emitted logs match the expected format.
 
 ```shell
-pytest .
+poetry run pytest .
 ```
 
 ## Contributing

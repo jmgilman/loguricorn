@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "A small package for rerouting gunicorn logs to loguru"
 authors = ["Joshua Gilman <joshuagilman@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/jmgilman/loguricorn"
+repository = "https://github.com/jmgilman/loguricorn"
+keywords = ["loguru", "gunicorn", "logging"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
