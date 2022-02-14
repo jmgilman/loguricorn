@@ -7,7 +7,8 @@ class InterceptHandler(logging.Handler):
     """Handler for intercepting records and outputting to loguru."""
 
     def emit(self, record: logging.LogRecord):
-        """Intercepts log messages
+        """Intercepts log messages.
+
         Intercepts log records sent to the handler, adds additional context to
         the records, and outputs the record to the default loguru logger.
         Args:

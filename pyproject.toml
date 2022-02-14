@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gunicorn-loguru"
+name = "loguricorn"
 version = "0.1.0"
 description = "A small package for rerouting gunicorn logs to loguru"
 authors = ["Joshua Gilman <joshuagilman@gmail.com>"]
@@ -8,6 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 loguru = "^0.6.0"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"
@@ -15,6 +16,13 @@ flake8 = "^4.0.1"
 mypy = "^0.931"
 isort = "^5.10.1"
 pytest = "^7.0.1"
+aiohttp = "^3.8.1"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
