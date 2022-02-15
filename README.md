@@ -32,6 +32,33 @@ gunicorn --logger-class loguricorn.Logger tests.app:app
 
 All log records will now be routed through the default `loguru.logger`.
 
+## Configuration
+
+It's possible to customize the `loguru.logger` instance before `gunicorn`
+initializes itself. Simply add your changes in a configuration file and pass it
+to gunicorn at runtime:
+
+```python
+import sys
+
+from loguru import logger
+
+logger.remove()
+logger.add(
+    sys.stderr,
+    colorize=True,
+    format="<green>{time}</green> <level>{message}</level>",
+)
+```
+
+```shell
+gunicorn -c conf.py --logger-class loguricorn.Logger tests.app:app
+```
+
+It's recommended to import any customizations from your main application and
+use them in the configuration in order to obtain a consistent log record format
+across the entire execution.
+
 ## Testing
 
 Testing is done by starting `gunicorn` in a subprocess with the custom logger
