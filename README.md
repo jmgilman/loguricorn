@@ -11,6 +11,8 @@
 
 > A small package for rerouting [gunicorn][1] logs to [loguru][2]
 
+![Example](example.svg)
+
 This package provides a compatible interface for automatically routing
 `gunicorn` logs to the popular `loguru` library.
 

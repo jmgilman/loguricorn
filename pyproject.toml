@@ -23,6 +23,7 @@ pytest = "^7.0.1"
 aiohttp = "^3.8.1"
 tox = "^3.24.5"
 tox-poetry = "^0.4.1"
+twine = "^3.8.0"
 
 [tool.black]
 line-length = 79
